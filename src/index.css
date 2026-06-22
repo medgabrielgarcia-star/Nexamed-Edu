@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*---- HEADER ----*/
+.header{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header-img{
+    width: 150px;
+    filter: drop-shadow(0 0 10px #000a)
+}
+
+.header-nav{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item{
+    text-decoration: none;
+    color: #000;
+}
+
+.header-btn{
+    align-self: center;
+    text-decoration: none;
+    color: #000;
+}
