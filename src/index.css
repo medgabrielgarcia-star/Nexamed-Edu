@@ -21,7 +21,7 @@ body{
 
 .header__img{
     width: 150px;
-    filter: drop-shadow(0 0 10px #000a)
+    filter: drop-shadow(0 0 15px #0e3e3a)
 }
 
 .header__nav{
@@ -159,4 +159,33 @@ body{
 
 .context__item span{
     color: #fff5;
+}
+
+.wrap__right{
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: secuenciarImagenes 2s infinite;
+}
+
+@keyframes secuenciarImagenes{
+    0%, 16.5%{
+        background-image: url()
+    }
+    16.6%, 33.5%{
+        background-image: url()
+    }
+    33.2%, 49.7%{
+        background-image: url();
+    }
+    49.8%, 66.3%{
+        background-image: url();
+    }
+    66.4%, 82.9%{
+        background-image: url();
+    }
+    83%, 100%{
+        background-image: url();
+    }
 }
