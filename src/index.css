@@ -17,6 +17,7 @@ body{
     background:linear-gradient( #fff, #fffd);
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 .header__img{
@@ -161,12 +162,12 @@ body{
     color: #fff5;
 }
 
- .wrap__right{
+/*.wrap__right{
 height: 500px;
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
-animation: secuenciarImagenes 2.2s infinite 0s step-end;
+animation: secuenciarImagenes 2.2s infinite ease; 
 }
 
 
@@ -188,4 +189,53 @@ animation: secuenciarImagenes 2.2s infinite 0s step-end;
     background-image: url(./assets/images/5.png);
 }
 
+}*/
+
+.wrap__right {
+    height: 500px;
+    width: 42%; /* Mantiene el tamaño que ya tenías */
+    position: relative; /* Permite que las imágenes se posicionen de forma absoluta dentro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Hace lo mismo que background-size: contain */
+    opacity: 0; /* Por defecto están ocultas */
+    animation: secuenciaSuave 4s infinite ease; /* Animación más larga para transiciones suaves */
+}
+
+/* Calculamos el retraso (delay) para cada imagen */
+.slide-img:nth-child(1) { animation-delay: 0s; }
+.slide-img:nth-child(2) { animation-delay: 1s; }
+.slide-img:nth-child(3) { animation-delay: 2s; }
+.slide-img:nth-child(4) { animation-delay: 3s; }
+
+@keyframes secuenciaSuave {
+    0% {
+        opacity: 1; /* Totalmente visible al inicio */
+        visibility: visible;
+    }
+    25%{
+        opacity: 1; /* Se desvanece suavemente */
+        visibility: hidden;
+    }
+    50%{
+         opacity: 1; /* Se desvanece suavemente */
+        visibility: hidden;
+    }
+    75%{
+         opacity: 1; /* Se desvanece suavemente */
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1; /*Regresa para el bucle */
+        visibility: hidden;
+    }
 }
