@@ -1,13 +1,15 @@
 {
   "name": "Nexamed-edu",
   "version": "1.0.0",
-  "description": "",
+  "description": "Democratización de educación en salud",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "servor ./ index.html 1234 --reload"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "salud"
+  ],
+  "author": "Gabriel Marcelo García Villacís",
   "license": "ISC",
   "devEngines": {
     "packageManager": {
@@ -17,10 +19,9 @@
     }
   },
   "type": "module",
-  "dependencies": {
-    "servor": "^4.0.2"
-  },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "oxfmt": "^0.56.0",
+    "oxlint": "^1.71.0",
+    "servor": "^4.0.2"
   }
 }
