@@ -172,23 +172,20 @@ animation: secuenciarImagenes 2.2s infinite ease-in-out both;
 
 @keyframes secuenciarImagenes{
 
-0%, 20%{
+0%, 25%{
     background-image: url(./assets/images/1.png)
 }
 
-20.1%, 40%{
-    background-image: url(./assets/images/2.png)
+25.1%, 50%{
+    background-image: url(./assets/images/3.png)
 }
 
-40.1%, 60%{
-    background-image: url(./assets/images/3.png);
-}
-
-60.1%, 80%{
+50.1%, 75%{
     background-image: url(./assets/images/4.png);
 }
 
-80.1%, 100%{
+75.1%, 100%{
     background-image: url(./assets/images/5.png);
 }
+
 }
