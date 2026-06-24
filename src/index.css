@@ -161,31 +161,34 @@ body{
     color: #fff5;
 }
 
-.wrap__right{
-    height: 500px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    animation: secuenciarImagenes 2s infinite;
+ .wrap__right{
+height: 500px;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+animation: secuenciarImagenes 2.2s infinite ease-in-out both;
 }
 
+
 @keyframes secuenciarImagenes{
-    0%, 16.5%{
-        background-image: url()
-    }
-    16.6%, 33.5%{
-        background-image: url()
-    }
-    33.2%, 49.7%{
-        background-image: url();
-    }
-    49.8%, 66.3%{
-        background-image: url();
-    }
-    66.4%, 82.9%{
-        background-image: url();
-    }
-    83%, 100%{
-        background-image: url();
-    }
+
+0%, 20%{
+    background-image: url(./assets/images/1.png)
+}
+
+20.1%, 40%{
+    background-image: url(./assets/images/2.png)
+}
+
+40.1%, 60%{
+    background-image: url(./assets/images/3.png);
+}
+
+60.1%, 80%{
+    background-image: url(./assets/images/4.png);
+}
+
+80.1%, 100%{
+    background-image: url(./assets/images/5.png);
+}
 }
