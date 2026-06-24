@@ -166,7 +166,7 @@ height: 500px;
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
-animation: secuenciarImagenes 2.2s infinite ease-in-out both;
+animation: secuenciarImagenes 2.2s infinite 0s step-end;
 }
 
 
