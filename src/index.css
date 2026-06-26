@@ -13,8 +13,8 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20px 0;
-  background: linear-gradient(#fff, #fffd);
+  padding: 12px 0;
+  background: linear-gradient(#fffc, #fffa);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -25,28 +25,35 @@ body {
   filter: drop-shadow(0 0 15px #0e3e3a);
 }
 
-.header__nav {
-  display: flex;
-  gap: 8px;
+.nav__list{
+    display: flex;
+    justify-content: space-around;
+    padding: 9px;
+    gap: 20px 
+
 }
 
-.nav__item {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  padding: 8px 16px;
-  border-radius: 10px;
+.nav__item{
+     list-style: none;
+     padding: 7px 12px;
 }
 
-.nav__item:hover {
-  color: #158077;
-  background-color: #eef9f8;
+.nav__item:hover{
+    background-color: #10b981;
+    border-color: #10b981;
+    border-radius: 10px;
 }
 
-.nav__item:active {
-  color: #126b63;
-  background: #d6f5f2;
+.nav__item a{
+    text-decoration: none;
+    color: #000;
 }
+
+.nav__item a:hover{
+    color: #fff;
+}
+
+
 
 .header__btn {
   align-self: center;
@@ -62,7 +69,63 @@ body {
   opacity: 0.9;
 }
 
+.toggle{
+    display: none;
+}
+
 /*---- HEADER RESPONSIVE ----*/
+
+@media screen and (max-width: 530px){
+ 
+    .header__img{
+        width: 230px;
+        order: 2
+    }
+
+    .header__nav{
+        display: none;
+        background: linear-gradient(#fffa, #fffc);
+        position: absolute;
+        top: 80.5px;
+        padding: 10px;
+        width: 100%;
+        border-radius: 0 0 5% 5%;
+    }
+
+    .nav__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .nav__item{
+        width: 250px;
+    }
+
+    .nav__item:hover::before {
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2));
+    }
+
+    .nav__list li:first-child::before{content:"🏠";}
+    .nav__list li:nth-child(2)::before{content:"📚" }
+     .nav__list li:nth-child(3)::before{content:"📖"}
+    .nav__list li:last-child::before{content:"⚠️"}
+
+
+    .header__btn{
+        display: none;
+    }
+
+    .toggle{
+        display: flex;      
+    }
+
+    .header__nav.active{
+        display: block;
+    }
+}
+
 
 /*---- HERO ----*/
 
@@ -222,6 +285,28 @@ body {
 }
 
 /*---- HERORESPONSIVE ----*/
+@media screen and (max-width: 530px){
+    .hero__wrap{
+        overflow: hidden;
+    }
+
+    .hero__eyebrow,.hero__title,.hero__text,.hero__btn-explorar,.hero__btn-buscar{
+        font-size: 1rem;
+    }
+
+    .hero__eyebrow{
+        width: 40dvw;
+        font-size: 0.8rem;
+    }
+
+    .wrap__left{
+        padding: 0;
+    }
+
+    .wrap__right{
+        display: none;
+    }
+}
 
 /*---- BUSCAR ----*/
 .search {
