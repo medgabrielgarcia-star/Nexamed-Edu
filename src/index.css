@@ -163,7 +163,7 @@ body {
 .hero__title {
   color: #fff;
   text-wrap: balance;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .hero__title span {
@@ -285,28 +285,42 @@ body {
 }
 
 /*---- HERORESPONSIVE ----*/
-@media screen and (max-width: 530px){
+
+/*---- MOBILE  ----*/
+@media screen and (max-width: 768px){
     .hero__wrap{
-        overflow: hidden;
+        height: 100%;
     }
 
-    .hero__eyebrow,.hero__title,.hero__text,.hero__btn-explorar,.hero__btn-buscar{
-        font-size: 1rem;
+      .wrap__left{
+        width: 80%;
+        display: flex; 
+        flex-direction: column;
     }
 
     .hero__eyebrow{
-        width: 40dvw;
-        font-size: 0.8rem;
+        display: none;
     }
 
-    .wrap__left{
-        padding: 0;
+
+    .hero__btn{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero__btn-buscar,.hero__btn-explorar{
+        padding: 20px;
     }
 
     .wrap__right{
         display: none;
     }
 }
+
+/*--- ----*/
+
+
 
 /*---- BUSCAR ----*/
 .search {
